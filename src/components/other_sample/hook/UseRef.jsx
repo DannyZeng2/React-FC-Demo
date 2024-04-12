@@ -4,7 +4,7 @@ const UseRef = () => {
   const inputRef = useRef();
 
   const handleClick = () => {
-    alert(`${inputRef.current.value}`);
+    alert(`${inputRef.current.scrollTop}`);
   };
 
   return (
