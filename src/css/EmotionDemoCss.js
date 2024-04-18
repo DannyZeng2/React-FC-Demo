@@ -38,11 +38,16 @@ export const blueFont = css`
     color: deepskyblue;
 `;
 
-export const yellowBgWithRedLink = css`
-    background-color: yellow;
-    a {
-        border-bottom: 1px solid;
-        color: red;
+export const orangeBgWithRedLink = css`
+    background-color: orange;
+    #textBg {
+        background-color: yellow;
+        width: 100px;
+        a {
+            border-bottom: 1px solid;
+            color: red;
+        }
     }
+    
 `;
 

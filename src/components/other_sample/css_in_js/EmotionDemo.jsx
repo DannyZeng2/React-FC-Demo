@@ -3,7 +3,7 @@ import {
     yellowBackground,
     BlueColor, blueFont,
     CustomizeColor,
-    GreenColorCard, orangeColor, yellowBgWithRedLink
+    GreenColorCard, orangeColor, orangeBgWithRedLink
 } from '../../../css/EmotionDemoCss';
 
 const EmotionDemo = () => {
@@ -32,8 +32,11 @@ const EmotionDemo = () => {
                 222
         </div>
 
-        <div css={yellowBgWithRedLink}>
-            <a>111</a>
+        {/*4. Nested Selectors*/}
+        <div css={orangeBgWithRedLink}>
+            <div id={'textBg'} >
+                <a>111</a>
+            </div>
         </div>
     </>
     );
