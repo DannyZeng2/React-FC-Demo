@@ -1,6 +1,5 @@
 import {connect} from 'react-redux';
-import {addDemoResult, searchDemoResult} from "../../redux/DemoRedux";
-
+import {addDemoResult, searchDemoResult} from '../../redux/DemoRedux';
 
 /**
  * mapStateToProps 是一个函数，它的参数state 对应 redux store 的完整状态

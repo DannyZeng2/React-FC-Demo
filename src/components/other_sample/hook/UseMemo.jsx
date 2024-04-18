@@ -1,21 +1,20 @@
-import React, {useMemo, useState} from "react";
-import DemoApi from "../../../api/DemoApi";
-import {Input, Radio, Select} from "antd";
+import React, {useMemo, useState} from 'react';
+import DemoApi from '../../../api/DemoApi';
+import {Input, Radio, Select} from 'antd';
 
 const UseMemo = () => {
 
-    const [linerGroup, setLinerGroup] = useState("OOCL");
+    const [linerGroup, setLinerGroup] = useState('OOCL');
 
-    const [value,setValue] = useState("");
+    const [value,setValue] = useState('');
 
     const sizeTypes = useMemo(() => {
-        console.log("call api...")
+        console.log('call api...')
         return DemoApi.loadSizeType(linerGroup)
     }, [linerGroup]);
 
     // console.log("call api...")
     // const sizeTypes = DemoApi.loadSizeType(linerGroup)
-
 
     return (
         <div style={{textAlign: 'left'}}>
@@ -23,7 +22,7 @@ const UseMemo = () => {
                 <Radio.Button value="OOCL">OOCL</Radio.Button>
                 <Radio.Button value="COSCO">COSCO</Radio.Button>
             </Radio.Group>
-            <Select style={{width:200}}>
+            <Select style={{width: 200}}>
                 {sizeTypes.map((item) => (
                     <Select.Option key={item}>{item}</Select.Option>
                 ))}
@@ -32,7 +31,6 @@ const UseMemo = () => {
             <Input value={value} onChange={(e) => setValue(e.target.value)} style={{width: '30%'}}/>
         </div>
     )
-
 
 }
 

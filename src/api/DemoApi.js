@@ -14,10 +14,9 @@ class DemoApi {
         }
     }
 
-
     loadSizeType(liner) {
-        return liner === "OOCL"? ['20GP', '20HQ'] : ['40GP', '40HQ']
+        return liner === 'OOCL'? ['20GP', '20HQ'] : ['40GP', '40HQ']
     }
- }
+}
 
 export default new DemoApi();

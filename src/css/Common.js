@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 import { css } from '@emotion/react'
-import Card from "antd/lib/card/Card";
+import Card from 'antd/lib/card/Card';
 
 export const orangeColor = css`
     background-color: orange
@@ -23,7 +23,6 @@ export const CustomizeColor = styled.div`
     font-size: ${props => props.fontSize ? props.fontSize : '24px'};
 `;
 
-
 export const bgYellow = css`
     background-color: yellow
 `;
@@ -37,5 +36,4 @@ export const blueYellow = css`
     background-color: yellow;
     ${blueFont}
 `;
-
 

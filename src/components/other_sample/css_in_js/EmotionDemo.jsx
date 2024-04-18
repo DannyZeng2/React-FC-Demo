@@ -4,37 +4,37 @@ import {
     BlueColor, blueFont, blueYellow,
     CustomizeColor,
     GreenColorCard, orangeColor
-} from "../../../css/Common";
+} from '../../../css/Common';
 
 const EmotionDemo = () => {
 
     return (<>
-            {/*1. Object Styles*/}
-            <div css={orangeColor}>
+        {/*1. Object Styles*/}
+        <div css={orangeColor}>
                 orange
-            </div>
+        </div>
 
-            {/*2. Styled Components*/}
-            <BlueColor>
+        {/*2. Styled Components*/}
+        <BlueColor>
                 Blue
-            </BlueColor>
+        </BlueColor>
 
-            <CustomizeColor color={'red'} fontSize={'30px'}>
+        <CustomizeColor color={'red'} fontSize={'30px'}>
                 Red
-            </CustomizeColor>
+        </CustomizeColor>
 
-            <GreenColorCard>
+        <GreenColorCard>
                 Green
-            </GreenColorCard>
+        </GreenColorCard>
 
-            {/*3. Composition*/}
-            <div css={blueYellow}>
+        {/*3. Composition*/}
+        <div css={blueYellow}>
                 111
-            </div>
-            <div css={[bgYellow, blueFont]}>
+        </div>
+        <div css={[bgYellow, blueFont]}>
                 222
-            </div>
-        </>
+        </div>
+    </>
     );
 }
 

@@ -6,7 +6,6 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 
 const loggerMiddleware = createLogger({collapsed: true});
 
-
 const store = createStore(
     combineReducers({
         demoResult: demoResultReducer,

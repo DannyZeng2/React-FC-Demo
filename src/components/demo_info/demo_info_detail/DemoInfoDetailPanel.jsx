@@ -4,8 +4,7 @@ import GeneralInfoPanel from './GeneralInfoPanel';
 import OtherInfoPanel from './OtherInfoPanel';
 import {Helmet} from 'react-helmet';
 import Card from 'antd/lib/card/Card';
-import DemoApi from "../../../api/DemoApi";
-
+import DemoApi from '../../../api/DemoApi';
 
 const DemoInfoDetailPanel = () => {
 

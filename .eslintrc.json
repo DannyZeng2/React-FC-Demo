@@ -1,0 +1,44 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 13,
+        "parser": "@babel/eslint-parser"
+    },
+    "plugins": [
+        "react",
+        "unused-imports",
+        "react-hooks"
+    ],
+    "rules": {
+        "react/prefer-stateless-function": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "react/no-unknown-property": ["error", { "ignore": ["css"] }],
+        "no-param-reassign": ["error", { "props": false }],
+        "linebreak-style": "off",
+        "indent": ["warn", 4, { "SwitchCase": 1 }],
+        "quotes": ["warn", "single"],
+        "no-unused-vars": "warn",
+        "unused-imports/no-unused-imports": "warn",
+        "key-spacing": ["warn", {"beforeColon": false, "afterColon": true}],
+        "no-multiple-empty-lines": ["warn", {"max": 1}],
+        "func-call-spacing": "warn",
+        "arrow-spacing": "warn",
+        "space-before-blocks": "warn",
+        "space-in-parens": ["warn", "never"],
+        "no-multi-spaces": "warn",
+        "react-hooks/rules-of-hooks": "error", // 检查 Hook 的规则
+        "react-hooks/exhaustive-deps": "warn" // 检查 effect 依赖
+    }
+}
