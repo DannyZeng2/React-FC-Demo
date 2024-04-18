@@ -1,15 +1,15 @@
 import React from 'react';
 import {
-    bgYellow,
-    BlueColor, blueFont, blueYellow,
+    yellowBackground,
+    BlueColor, blueFont,
     CustomizeColor,
-    GreenColorCard, orangeColor
-} from '../../../css/Common';
+    GreenColorCard, orangeColor, yellowBgWithRedLink
+} from '../../../css/EmotionDemoCss';
 
 const EmotionDemo = () => {
 
     return (<>
-        {/*1. Object Styles*/}
+        {/*1. CSS props*/}
         <div css={orangeColor}>
                 orange
         </div>
@@ -28,11 +28,12 @@ const EmotionDemo = () => {
         </GreenColorCard>
 
         {/*3. Composition*/}
-        <div css={blueYellow}>
-                111
-        </div>
-        <div css={[bgYellow, blueFont]}>
+        <div css={[yellowBackground, blueFont]}>
                 222
+        </div>
+
+        <div css={yellowBgWithRedLink}>
+            <a>111</a>
         </div>
     </>
     );

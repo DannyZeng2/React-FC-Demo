@@ -2,9 +2,15 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react'
 import Card from 'antd/lib/card/Card';
 
+// string styles
 export const orangeColor = css`
     background-color: orange
 `;
+
+// object styles
+export const redColor = {
+    backgroundColor: 'red'
+};
 
 export const BlueColor = styled.div`
     padding: 16px;
@@ -23,7 +29,7 @@ export const CustomizeColor = styled.div`
     font-size: ${props => props.fontSize ? props.fontSize : '24px'};
 `;
 
-export const bgYellow = css`
+export const yellowBackground = css`
     background-color: yellow
 `;
 
@@ -32,8 +38,11 @@ export const blueFont = css`
     color: deepskyblue;
 `;
 
-export const blueYellow = css`
+export const yellowBgWithRedLink = css`
     background-color: yellow;
-    ${blueFont}
+    a {
+        border-bottom: 1px solid;
+        color: red;
+    }
 `;
 
