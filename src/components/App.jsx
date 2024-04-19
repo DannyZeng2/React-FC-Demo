@@ -3,23 +3,17 @@ import AppRouter from './AppRouter';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import store from '../redux/store';
-import {ThemeProvider} from '@emotion/react';
-const theme = {
-    color: {
-        primary: '#0070f3',
-    },
-};
+import {root} from '../css/CommonCss';
+
 const App = () => {
     return (
-        <ThemeProvider theme={theme}>
-            <Provider store={store}>
-                <div className="App">
-                    <Router>
-                        <AppRouter/>
-                    </Router>
-                </div>
-            </Provider>
-        </ThemeProvider>
+        <Provider store={store}>
+            <div css={root}>
+                <Router>
+                    <AppRouter/>
+                </Router>
+            </div>
+        </Provider>
     )
 }
 

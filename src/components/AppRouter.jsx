@@ -5,17 +5,18 @@ import SearchDemoInfoPanel
 import DemoInfoDetailPanel
     from './demo_info/demo_info_detail/DemoInfoDetailPanel';
 import UseParams from './other_sample/hook/UseParams';
-import UseMemo from './other_sample/hook/UseMemo';
 import EmotionDemo from './other_sample/css_in_js/EmotionDemo';
+import Home from './Home';
+import UseEffect from './other_sample/hook/UseEffect';
 
 const AppRouter = () => {
 
     return (
         <Routes>
-            <Route path='/' element={<SearchDemoInfoPanel />} exact/>
+            <Route path='/' element={<Home />} exact/>
             <Route path='/demo' element={<SearchDemoInfoPanel />} exact/>
             <Route path='/submit' element={<DemoInfoDetailPanel />} exact/>
-            <Route path='/hook' element={<UseMemo />} exact/>
+            <Route path='/hook' element={<UseEffect />} exact/>
             <Route path="/user/:id" element={<UseParams/>} exact/>
             <Route path="/css" element={<EmotionDemo/>} exact/>
         </Routes>

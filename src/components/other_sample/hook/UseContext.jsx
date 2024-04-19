@@ -1,6 +1,5 @@
 import React, { createContext, useState } from 'react';
 
-// 创建一个Context
 const MyContext = createContext('');
 
 const UseContext = () => {

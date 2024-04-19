@@ -1,30 +1,30 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import DemoApi from '../../../api/DemoApi';
 import { Radio, Select} from 'antd';
 
 const UseCallback = () => {
 
     const [linerGroup, setLinerGroup] = useState('OOCL');
-    const [sizeType, setSizeType] = useState([]);
 
-    const loadSizeTypes = useCallback(() => {
-        console.log('call api...')
-        const sizeTypes = DemoApi.loadSizeType(linerGroup)
-        setSizeType(sizeTypes)
-    }, [linerGroup]);
+    const [sizeTypes, setSizeTypes] = useState([]);
+
+    const getSizeType = () => {
+        return DemoApi.loadSizeType(linerGroup)
+    }
 
     useEffect(() => {
-        loadSizeTypes()
-    }, [loadSizeTypes]);
+        setSizeTypes(getSizeType())
+        console.log('render...')
+    }, [getSizeType]);
 
     return (
-        <div style={{textAlign: 'left'}}>
+        <div>
             <Radio.Group value={linerGroup} onChange={(e) => setLinerGroup(e.target.value)}>
                 <Radio.Button value="OOCL">OOCL</Radio.Button>
                 <Radio.Button value="COSCO">COSCO</Radio.Button>
             </Radio.Group>
             <Select style={{width: 200}}>
-                {sizeType.map((item) => (
+                {sizeTypes.map((item) => (
                     <Select.Option key={item}>{item}</Select.Option>
                 ))}
             </Select>

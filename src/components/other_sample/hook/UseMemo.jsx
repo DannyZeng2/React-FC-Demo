@@ -9,15 +9,11 @@ const UseMemo = () => {
     const [value,setValue] = useState('');
 
     const sizeTypes = useMemo(() => {
-        console.log('call api...')
         return DemoApi.loadSizeType(linerGroup)
     }, [linerGroup]);
 
-    // console.log("call api...")
-    // const sizeTypes = DemoApi.loadSizeType(linerGroup)
-
     return (
-        <div style={{textAlign: 'left'}}>
+        <div>
             <Radio.Group value={linerGroup} onChange={(e) => setLinerGroup(e.target.value)}>
                 <Radio.Button value="OOCL">OOCL</Radio.Button>
                 <Radio.Button value="COSCO">COSCO</Radio.Button>
@@ -28,7 +24,7 @@ const UseMemo = () => {
                 ))}
             </Select>
             <br/>
-            <Input value={value} onChange={(e) => setValue(e.target.value)} style={{width: '30%'}}/>
+            <Input value={value} onChange={(e) => setValue(e.target.value)} style={{width: '19%', marginTop: 10}}/>
         </div>
     )
 
