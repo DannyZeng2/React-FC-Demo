@@ -10,7 +10,6 @@ const UseEffect = () => {
     useEffect(() => {
         const sizeType = DemoApi.loadSizeType(linerGroup)
         setSizeType(sizeType)
-
         return () => {
             setSizeType([])
         };

@@ -2,17 +2,17 @@ import React, {useState} from 'react';
 
 const UseState = (props) => {
 
-    const [number, setNumber] = useState(0);
+    const [number1, setNumber1] = useState(0);
+    const [number2, setNumber2] = useState(0);
 
     const add = () => {
-        setNumber(number + 1);
-        setNumber(number + 1);
-        setNumber(number + 1);
+        setNumber1(number1 + 1);
+        setNumber2(number2 + 1);
     }
 
     return (
         <>
-            <h1>{number}</h1>
+            <h1>{number1}</h1>
             <button onClick={add}>Add</button>
         </>
     )

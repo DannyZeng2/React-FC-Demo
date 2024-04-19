@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import DemoApi from '../../../api/DemoApi';
 import { Radio, Select} from 'antd';
 
@@ -8,9 +8,9 @@ const UseCallback = () => {
 
     const [sizeTypes, setSizeTypes] = useState([]);
 
-    const getSizeType = () => {
+    const getSizeType = useCallback(() => {
         return DemoApi.loadSizeType(linerGroup)
-    }
+    },[linerGroup])
 
     useEffect(() => {
         setSizeTypes(getSizeType())
